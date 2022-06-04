@@ -1,0 +1,71 @@
+{
+  "program": {
+    "uuid": "5ryBDj",
+    "candyMachine": "5ryBDj6ucJCjUgHKUHrvgfCSKBnuoBHnECZhaCQLyW9P",
+    "collection": "Ay8L4MJDXHTtxxi7dMVpjPqhYkzRMT1cfQ1YcgZir5vC"
+  },
+  "items": {
+    "0": {
+      "link": "https://arweave.net/NlVFooe-f4WNN510-_xIsXrRWCGX5FaIBm_uQvNGWwo",
+      "name": "Number #0001",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "1": {
+      "link": "https://arweave.net/EwKuzxYzNw2j-jjAinGZKMM6c_PVoOHJmSIwKQvYR_E",
+      "name": "Number #0002",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "2": {
+      "link": "https://arweave.net/J9gBxXQvUXn5f02cbo6Rgo3G3B3Tbt-xdNCv3PxhIZM",
+      "name": "Number #0003",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "3": {
+      "link": "https://arweave.net/jhlnHpt4E9hzicF5g0x2In--yoP44wUctIwEJ3kSWcM",
+      "name": "Number #0004",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "4": {
+      "link": "https://arweave.net/45e-0EPugxkup7jXPDnBAr-0_XiGjV7UidqGgXuPsXg",
+      "name": "Number #0005",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "5": {
+      "link": "https://arweave.net/SXBeK-JmNfZ5KmcUm4MCQxEDWgqaxRGB7dhQPWKmeIM",
+      "name": "Number #0006",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "6": {
+      "link": "https://arweave.net/oZC3F59IUBMPSED_e-cbud7taSNwD4YNM0OucYvU2I4",
+      "name": "Number #0007",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "7": {
+      "link": "https://arweave.net/mIEEUdvjQZxOJ0b3MvZVBRj-jYnLk84pKaT_YyLkOzM",
+      "name": "Number #0008",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "8": {
+      "link": "https://arweave.net/GNyq6QyZN-dxp8pnzEZwASM0IpawbTjAhGb6UDzqJ7I",
+      "name": "Number #0009",
+      "onChain": true,
+      "verifyRun": true
+    },
+    "9": {
+      "link": "https://arweave.net/VKA5y14gmR3Fmh9kgH02Zml0vG9qPis88NF66FTmX_A",
+      "name": "Number #0010",
+      "onChain": true,
+      "verifyRun": true
+    }
+  },
+  "env": "devnet",
+  "cacheName": "example"
+}
