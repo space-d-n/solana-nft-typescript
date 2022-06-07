@@ -1,5 +1,5 @@
 import {clusterApiUrl, Connection, Keypair, PublicKey} from "@solana/web3.js";
-import {getOrCreateAssociatedTokenAccount, transferChecked} from "@solana/spl-token";
+import {getOrCreateAssociatedTokenAccount, transfer, transferChecked} from "@solana/spl-token";
 import * as bs58 from "bs58";
 
 (async () => {
@@ -64,15 +64,26 @@ import * as bs58 from "bs58";
   //   true, // allowOwnerOffCurve
   // );
 
-  let txhash = await transferChecked(
+  let transferCheckedTx = await transferChecked(
     connection, // connection
     owner, // payer
     ownerTokenAccount.address, // from (should be a token account)
     mintPubkey, // mint
     receiverTokenAccount.address, // to (should be a token account)
-    owner.publicKey, // from's owner
+    owner, // from's owner
     1e8, // amount, if your deciamls is 8, send 10^8 for 1 token
     8 // decimals
   );
-  console.log(`txhash: ${txhash}`);
+  const transferTx = await transfer(
+    connection,
+    owner,
+    ownerTokenAccount.address,
+    receiverTokenAccount.address,
+    owner,
+    1,
+    [owner]
+  )
+  console.log(`transferTx: ${transferTx}`);
+
+
 })();
