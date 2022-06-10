@@ -15,6 +15,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.post('/donate', async (req: Request, res: Response) => {
+  console.log(`post req url ${req.url}`)
   /*
     Transfer request params provided in the URL by the app client. In practice, these should be generated on the server,
     persisted along with an unpredictable opaque ID representing the payment, and the ID be passed to the app client,
@@ -70,6 +71,7 @@ app.post('/donate', async (req: Request, res: Response) => {
 })
 
 app.get('/donate', async (req: Request, res: Response) => {
+  console.log(`get req url ${req.url}`)
   res.status(200).send({label: "transaction request", icon: "https://w7.pngwing.com/pngs/34/292/png-transparent-sunglasses-thug-life-cool-miscellaneous-angle-white.png"});
 })
 
