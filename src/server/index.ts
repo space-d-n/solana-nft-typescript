@@ -69,6 +69,10 @@ app.post('/donate', async (req: Request, res: Response) => {
   res.status(200).send({transaction: base64, message});
 })
 
+app.get('/donate', async (req: Request, res: Response) => {
+  res.status(200).send({label: "transaction request", icon: "https://w7.pngwing.com/pngs/34/292/png-transparent-sunglasses-thug-life-cool-miscellaneous-angle-white.png"});
+})
+
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
 });
