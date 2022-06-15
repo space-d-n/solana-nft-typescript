@@ -1,9 +1,9 @@
 import express, {Express, Request, Response} from 'express';
 import dotenv from 'dotenv';
 import BigNumber from 'bignumber.js';
-import {clusterApiUrl, Connection, LAMPORTS_PER_SOL, PublicKey, Transaction} from "@solana/web3.js";
+import {clusterApiUrl, Connection, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/web3.js";
 import {WalletAdapterNetwork} from "@solana/wallet-adapter-base"
-
+import cors from 'cors'
 import bodyParser from "body-parser";
 import {createTransferInstruction} from "@solana/spl-token";
 import {createTransfer} from "@solana/pay";
@@ -13,6 +13,7 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT;
 
+app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -67,11 +68,11 @@ app.post('/donate', async (req: Request, res: Response) => {
       feePayer: recipient,
     })
 
-    const transferIntruction = createTransferInstruction(
-      account,
-      recipient,
-      account,
-      0.1 * LAMPORTS_PER_SOL
+    const transferIntruction = SystemProgram.transfer({
+        fromPubkey: account,
+        toPubkey: recipient,
+        lamports: amount.multipliedBy(LAMPORTS_PER_SOL).toNumber()
+      }
     )
 
     // Transfer 0.2 SOL from Buyer -> Seller
