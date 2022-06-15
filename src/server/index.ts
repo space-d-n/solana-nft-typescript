@@ -65,7 +65,7 @@ app.post('/donate', async (req: Request, res: Response) => {
     const transaction = new Transaction({
       recentBlockhash: blockhash,
       // The recipient pays the transaction fee
-      feePayer: recipient,
+      feePayer: account,
     })
 
     const transferIntruction = SystemProgram.transfer({
